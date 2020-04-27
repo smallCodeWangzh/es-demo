@@ -1,12 +1,13 @@
 package com.elasticsearch.bean;
 
 import lombok.Data;
+import lombok.ToString;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
-
+@ToString
 @Data
 @Document(indexName = "goods",type = "docs",shards = 3,replicas = 2)
 public class Goods {
